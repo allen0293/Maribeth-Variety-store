@@ -1,0 +1,1 @@
+UPDATE contri_fee_tbl set contri_fee_tbl.contri_id = (SELECT contri_tbl.contri_id FROM contri_tbl ORDER BY contri_id DESC LIMIT 1 ) WHERE contri_fee_tbl.contri_id IS NULL;

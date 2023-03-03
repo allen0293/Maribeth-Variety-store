@@ -1,0 +1,2 @@
+SELECT date(trans_date) as purchased_date, sum(total_amount) as sales_peday FROM transaction WHERE trans_date >= LAST_DAY(NOW() - INTERVAL 1 MONTH) + INTERVAL 1 DAY
+AND trans_date <= LAST_DAY(NOW()) 
